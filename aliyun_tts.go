@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"log"
+	"os"
 	"strings"
 )
 
@@ -21,7 +22,7 @@ func main() {
 	flag.Parse()
 	if *phone == "" {
 		fmt.Println("phone not found")
-		flag.Parsed()
+		os.Exit(1)
 	}
 	phones := strings.Split(*phone, ",")
 
